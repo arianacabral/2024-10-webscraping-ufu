@@ -8,4 +8,4 @@
 
 **Disciplina:** Ciência de Dados Aplicada à Engenharia Biomédica
 
-**Data:** 21/10/2024
+**Data:** 22/10/2024
