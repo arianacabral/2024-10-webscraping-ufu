@@ -510,7 +510,7 @@ Ariana Moura Cabral
 <p><strong>Exemplo 2</strong></p>
 </div>
 <div class="callout-content">
-<p>Neste exemplo, vamos fazer um <strong><em>web scraping</em></strong> na página da <a href="https://www.physionet.org/">Physionet</a>, que é uma página que contêm arquivos de bases de dados abertas, para obter os arquivos disponíveis da base de dados <strong>MIT-BIH Arrhythmia</strong>.</p>
+<p>Neste exemplo, vamos fazer um <strong><em>web scraping</em></strong> na página da <a href="https://www.physionet.org/">Physionet</a>, que é um repositório de bases de dados abertas e fechadas, para obter os arquivos disponíveis da base de dados <strong>MIT-BIH Arrhythmia</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><a href="https://www.physionet.org/content/mitdb/1.0.0/"><img data-src="figs/mit_bih.png" style="width:70.0%"></a></p>
@@ -555,7 +555,7 @@ Ariana Moura Cabral
 <span id="cb4-30"><a href="#cb4-30"></a>    remote_file_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(url, href, <span class="st">"?download"</span>)</span>
 <span id="cb4-31"><a href="#cb4-31"></a>    remote_file <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(remote_file_url)</span>
 <span id="cb4-32"><a href="#cb4-32"></a></span>
-<span id="cb4-33"><a href="#cb4-33"></a>    <span class="co"># Salvar o arquivo localmente</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a>    <span class="co"># salvando o arquivo localmente</span></span>
 <span id="cb4-34"><a href="#cb4-34"></a>    <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(remote_file) <span class="sc">==</span> <span class="dv">200</span>) {</span>
 <span id="cb4-35"><a href="#cb4-35"></a>      <span class="fu">writeBin</span>(httr<span class="sc">::</span><span class="fu">content</span>(remote_file, <span class="st">"raw"</span>), <span class="fu">paste0</span>(<span class="st">"../data/physionet/"</span>, href))</span>
 <span id="cb4-36"><a href="#cb4-36"></a>    } <span class="cf">else</span> {</span>

@@ -75,7 +75,7 @@ mun_mg |>
 ::: {.callout-exercise icon="false"}
 ## Exemplo 2
 
-Neste exemplo, vamos fazer um ***web scraping*** na página da [Physionet](https://www.physionet.org/), que é uma página que contêm arquivos de bases de dados abertas, para obter os arquivos disponíveis da base de dados **MIT-BIH Arrhythmia**.
+Neste exemplo, vamos fazer um ***web scraping*** na página da [Physionet](https://www.physionet.org/), que é um repositório de bases de dados abertas e fechadas, para obter os arquivos disponíveis da base de dados **MIT-BIH Arrhythmia**.
 
 [![](figs/mit_bih.png){fig-align="center" width="70%"}](https://www.physionet.org/content/mitdb/1.0.0/)
 
@@ -116,7 +116,7 @@ if (httr::status_code(response) == 200) {
     remote_file_url <- paste0(url, href, "?download")
     remote_file <- httr::GET(remote_file_url)
 
-    # Salvar o arquivo localmente
+    # salvando o arquivo localmente
     if (httr::status_code(remote_file) == 200) {
       writeBin(httr::content(remote_file, "raw"), paste0("../data/physionet/", href))
     } else {
