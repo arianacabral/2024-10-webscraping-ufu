@@ -1,4 +1,4 @@
-# 🕷 Web Scraping com R 🕸
+# 🕷 Web Scraping no R 🕸
 
 <br>
 
